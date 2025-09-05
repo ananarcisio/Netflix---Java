@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
-body{}
+body{
+    height: 99vh;
+    width: 100%;
+}
 
 main{
-    background-color: url("https://assets.nflxext.com/ffe/siteui/vlv3/8d617e19-3c3c-4c28-8998-c9b14dbc7200/web/BR-pt-20250901-TRIFECTA-perspective_da44cb39-44de-4872-bb67-7e467444fecc_large.jpg");
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/8d617e19-3c3c-4c28-8998-c9b14dbc7200/web/BR-pt-20250901-TRIFECTA-perspective_da44cb39-44de-4872-bb67-7e467444fecc_large.jpg");
     height: 99vh;
     width: 100%;
 }
