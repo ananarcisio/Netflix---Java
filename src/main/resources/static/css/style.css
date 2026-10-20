@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header & Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 4%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    transition: background-color 0.4s ease;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    color: #E50914;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links .active a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right .icon {
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #E50914;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    /* position: relative; */
+    height: 85vh;
+    width: 100%;
+    background: url('https://www.thewrap.com/wp-content/uploads/2025/07/Stranger-Things-Season-5-Poster-Vecna.jpg?width=990&height=557&fit=bounds') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(77deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 85%),
+                linear-gradient(0deg, #141414 0%, transparent 25%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.badge {
+    color: #E50914;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: #e5e5e5;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-play {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-play:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #ffffff;
+}
+
+.btn-info:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* Secção de Filmes */
+.movies-section {
+    padding: 0 4% 50px 4%;
+    margin-top: -120px;
+    position: relative;
+    z-index: 20;
+}
+
+.row-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #e5e5e5;
+}
+
+.movies-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.movies-row::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    position: relative;
+    flex: 0 0 230px;
+    height: 330px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #181818;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card:hover {
+    transform: scale(1.08);
+    z-index: 30;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.movie-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay h4 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.card-overlay p {
+    font-size: 0.75rem;
+    color: #aaaaaa;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

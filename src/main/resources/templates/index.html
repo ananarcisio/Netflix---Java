@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Assistir a filmes e séries online</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">NETFLIX</h1>
+            <ul class="nav-links">
+                <li class="active"><a href="#">Início</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Mais Recentes</a></li>
+                <li><a href="#">A minha lista</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <i class="fas fa-search icon"></i>
+            <i class="fas fa-bell icon"></i>
+            <div class="avatar"></div>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero) -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="badge">Nº1 SÉRIE INTERNACIONAL</div>
+            <h2 class="hero-title">STRANGER THINGS</h2>
+            <p class="hero-desc">Quando um jovem desaparece, uma pequena cidade descobre um mistério envolvendo experiências secretas, forças sobrenaturais aterrorizantes e uma estranha menina.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-play"><i class="fas fa-play"></i> Assistir</button>
+                <button class="btn btn-info"><i class="fas fa-info-circle"></i> Mais informações</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de Filmes em Alta -->
+    <section class="movies-section">
+        <h3 class="row-title">Em alta em Brasil</h3>
+        <div class="movies-row">
+            <div class="movie-card" th:each="movie : ${movies}">
+                <img th:src="${movie.coverImageUrl}" th:alt="${movie.title}" />
+                <div class="card-overlay">
+                    <h4 th:text="${movie.title}">Título</h4>
+                    <p th:text="${movie.description}">Descrição</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
