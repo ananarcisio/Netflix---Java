@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <!-- Chama o arquivo style.css que está na pasta static/css -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="navbar">
+        <h1 class="logo">NETFLIX</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo de volta!</h2>
+            <p>Assista aos melhores filmes e séries agora mesmo.</p>
+            <button class="btn-play">▶ Assistir</button>
+            <button class="btn-info">ℹ Mais informações</button>
+        </div>
+    </section>
+
+    <!-- Lista de Filmes Dinâmica vinda do Banco de Dados -->
+    <section class="movies-section">
+        <h3>Em Alta</h3>
+        <div class="movies-row">
+            <!-- Thymeleaf: Cria um card para cada filme encontrado no banco -->
+            <div class="movie-card" th:each="movie : ${movies}">
+                <img th:src="${movie.coverImageUrl}" th:alt="${movie.title}" />
+                <div class="movie-info">
+                    <h4 th:text="${movie.title}">Título</h4>
+                    <p th:text="${movie.description}">Descrição</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
