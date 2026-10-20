@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 99vh;
+            width: 100%;
+        }
+
+        main {
+            background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/8d617e19-3c3c-4c28-8998-c9b14dbc7200/web/BR-pt-20250901-TRIFECTA-perspective_da44cb39-44de-4872-bb67-7e467444fecc_large.jpg");
+            background-color: rgba(0, 0, 0, 0.8);
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 99vh;
+            width: 100%;
+        }
+
+        header {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #logo img {
+            width: 180px !important;
+            height: auto !important;
+        }
+        
+        #header-info a{
+            background-color: red;
+        }
+    </style>
+    <title>Netflix</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div id="logo">
+                <img src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-08-26/consent/87b6a5c0-0104-4e96-a291-092c11350111/0198e689-25fa-751d-8fbc-b84325ea3035/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="Netflix">
+            </div>
+            <div id="header-info">
+                <select id="select_linguage" name="LanguageSelect" data-uia="language-picker-header" data-wct-form-control-element="true">
+                    <option lang="pt" label="Português" value="pt-BR">Português</option>
+                    <option lang="en" label="English" value="en-BR">English</option>
+                </select>
+                <a href="">
+                    Entrar
+                </a>
+            </div>    
+        </header>
+    </main>
+</body>
+</html>

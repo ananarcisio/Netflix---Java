@@ -1,0 +1,5 @@
+INSERT INTO movie (title, description, cover_image_url) VALUES ('Stranger Things', 'Ficção Científica e Mistério', 'https://via.placeholder.com/300x450/111111/E50914?text=Stranger+Things');
+INSERT INTO movie (title, description, cover_image_url) VALUES ('Wandinha', 'Série de Comédia e Fantasia', 'https://via.placeholder.com/300x450/111111/E50914?text=Wandinha');
+INSERT INTO movie (title, description, cover_image_url) VALUES ('Dark', 'Ficção Científica e Suspense', 'https://via.placeholder.com/300x450/111111/E50914?text=Dark');
+INSERT INTO movie (title, description, cover_image_url) VALUES ('Black Mirror', 'Ficção Científica Distópica', 'https://via.placeholder.com/300x450/111111/E50914?text=Black+Mirror');
+INSERT INTO movie (title, description, cover_image_url) VALUES ('Peaky Blinders', 'Drama Policial e Histórico', 'https://via.placeholder.com/300x450/111111/E50914?text=Peaky+Blinders');
