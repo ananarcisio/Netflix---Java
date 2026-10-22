@@ -4,14 +4,6 @@ Um clone moderno da interface da Netflix desenvolvido em **Java 17** com **Sprin
 
 ---
 
-## 📸 Demonstração da Aplicação
-
-![Netflix Clone Banner](https://raw.githubusercontent.com/ananarcisio/Netflix---Java/main/screenshots/preview.png)
-
-> **Nota:** Adicione a sua captura de ecrã na pasta `screenshots/preview.png` do repositório para que a imagem apareça aqui automaticamente.
-
----
-
 ## 🚀 Tecnologias e Ferramentas Utilizadas
 
 - **Linguagem:** Java 17
